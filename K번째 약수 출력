@@ -1,3 +1,4 @@
+##K번째 약수출력
 
 import sys
 sys.stdin = open("input.txt",'rt')
