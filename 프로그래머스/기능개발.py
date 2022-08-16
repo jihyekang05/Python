@@ -71,7 +71,42 @@ print(answer)
 
 
 
+##프로그래머스 1차제출 코드
+def solution(progresses, speeds):
+    answer = []
+    n = 100
+    a=0
+    b=0
+    res=[]
+    answer=[]
+    cnt=0
+    norm=0
+    
+    for i in range(len(progresses)):
+        a = n-progresses[i]
+        b=a//speeds[i]
+        c=a%speeds[i]
+        if(c>0):
+            b+=1
+        res.append(b)
 
+    
+    for i in range(len(res)):
+        if(norm<res[i]):
+            norm=res[i]
+            cnt=0
+            cnt+=1
+            answer.append(cnt)
+
+        else:
+            norm-=res[i]
+            cnt+=1
+            print(cnt)
+            answer[len(answer)-1]=cnt
+    
+    
+    
+    return answer
 
 
 
